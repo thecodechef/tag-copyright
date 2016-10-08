@@ -1,14 +1,17 @@
 {
   "name": "tag-copyright",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A GitBook Plugin of a Copyright Tag",
   "main": "index.js",
+  "engines": {
+    "gitbook":">= 3.x.x"
+  },
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thecodechef/tag-copyright.git"
+    "url": "https://github.com/thecodechef/tag-copyright.git"
   },
   "keywords": [
     "git",
@@ -27,5 +30,24 @@
   "bugs": {
     "url": "https://github.com/thecodechef/tag-copyright/issues"
   },
-  "homepage": "https://github.com/thecodechef/tag-copyright#readme"
+  "homepage": "https://github.com/thecodechef/tag-copyright#readme",
+  "gitbook": {
+    "properties": {
+      "year": {
+        "type": "string",
+        "default": "new Date().getFullYear();",
+        "description": "Display the full Year in Copyright"
+      },
+      "by": {
+        "type": "string",
+        "default": "Gitbook",
+        "description": "Display the Author name in Copyright"
+      },
+      "license": {
+        "type": "boolean",
+        "default": true,
+        "description": "Choose to Display the LICENSE file after Copyright"
+      }
+    }
+  }
 }
